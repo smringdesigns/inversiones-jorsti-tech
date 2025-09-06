@@ -1,0 +1,61 @@
+/* Contenedor principal del CTA */
+.cta-container {
+  background: linear-gradient(
+    160deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  color: var(--color-white);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 28px rgba(0, 154, 224, 0.4); /* Glow azul corporativo */
+}
+
+/* Título CTA */
+.cta-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--color-accent); /* Resalta con cian brillante */
+}
+
+.cta-container h2 .highlight {
+  color: var(--color-white); /* Contraste inverso */
+}
+
+/* Texto CTA */
+.cta-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-light);
+  line-height: 1.6;
+}
+
+/* Botón CTA */
+.section-button {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background: var(--color-secondary); /* Azul corporativo */
+  color: var(--color-white);
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-button:hover {
+  background: var(--color-accent); /* Cian brillante */
+  color: var(--color-dark);
+  transform: scale(1.08);
+  box-shadow: 0 0 12px var(--color-accent);
+}

@@ -1,0 +1,102 @@
+/* Contenedor principal (agrupa formulario + información) */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: 60px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Bloques (formulario e info) */
+.contact-form-container,
+.contact-info-container {
+  flex: 1 1 450px;
+  background: linear-gradient(
+    135deg,
+    var(--color-medium) 0%,
+    var(--color-darker) 100%
+  );
+  padding: 35px 30px;
+  border-radius: 16px; /* más redondeado */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container:hover,
+.contact-info-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 255, 255, 0.25);
+}
+
+/* Información de contacto */
+.contact-info-container h3 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.contact-info-container p {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: var(--color-light-muted);
+  line-height: 1.6;
+}
+
+/* Formulario */
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1px solid var(--color-light-muted);
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background-color: var(--color-darker);
+}
+
+/* Botón de enviar */
+.contact-button {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px; /* estilo pastilla */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  box-shadow: 0 0 14px var(--color-accent);
+}

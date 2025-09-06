@@ -1,0 +1,141 @@
+:root {
+  /* Colores base */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-dark: #13161c;        /* Negro grisáceo */
+  --color-darker: #1e2229;      /* Gris carbón */
+  --color-medium: #2d323a;      /* Gris grafito */
+  --color-muted: #555c68;       /* Gris medio */
+  --color-light-muted: #87909d; /* Gris azulado */
+  --color-light: #c4c8ce;       /* Gris claro */
+  --color-background: #f9f9f9;
+
+  /* Paleta de marca (Azules + Cian) */
+  --color-primary: #101926;         /* Azul principal */
+  --color-secondary: #009AE0;       /* Azul corporativo */
+  --color-accent: #00ffff;          /* Cian brillante (acento) */
+  --color-cyan: #2bdefd;            /* Cian claro */
+  --color-blue-dark: #217BFE;       /* Azul brillante */
+
+  /* Colores de alerta o acción */
+  --color-danger: #e53256;        /* Rojo intenso */
+  --color-danger-dark: #8f283d;   /* Rojo vino */
+  --color-warning: #e26a63;       /* Rojo coral */
+  --color-critical: #cc2949;      /* Rojo crítico */
+  --color-critical-dark: #b22440; /* Rojo oscuro */
+}
+
+/* Estilo global del body */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Fondo degradado moderno */
+  background: linear-gradient(
+    160deg,
+    var(--color-medium) 0%,
+    var(--color-primary) 100%
+  );
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+/* Contenedor global */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Secciones centradas */
+.text-center {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 10px;
+}
+
+/* Títulos */
+.text-center h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--color-white);
+}
+
+/* Párrafos */
+.text-center p {
+  font-size: 1.1rem;
+  color: var(--color-white);
+  line-height: 1.6;
+}
+
+/* BOTONES REUTILIZABLES */
+
+/* Botón primario */
+.btn-primary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: var(--color-blue-dark);
+  transform: scale(1.05);
+}
+
+/* Botón de acento */
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-accent:hover {
+  background: var(--color-cyan);
+  transform: scale(1.05);
+}
+
+/* Botón de peligro */
+.btn-danger {
+  background: var(--color-danger);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-danger:hover {
+  background: var(--color-danger-dark);
+  transform: scale(1.05);
+}
+
+/* Botón de advertencia */
+.btn-warning {
+  background: var(--color-warning);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-warning:hover {
+  background: var(--color-critical-dark);
+  transform: scale(1.05);
+}
+/* INPUTS REUTILIZABLES */

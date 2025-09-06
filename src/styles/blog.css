@@ -1,0 +1,59 @@
+.blog-container {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem; /* separa más las tarjetas */
+  margin-top: 3rem;
+}
+
+.blog-card {
+  background: linear-gradient(135deg, var(--color-medium), var(--color-darker));
+  color: var(--color-white);
+  padding: 2.2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 255, 255, 0.25);
+}
+
+.blog-card h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  color: var(--color-accent);
+}
+
+.blog-card .blog-date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-light-muted);
+  margin-bottom: 1rem;
+}
+
+.blog-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.blog-button:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  box-shadow: 0 0 14px var(--color-accent);
+}

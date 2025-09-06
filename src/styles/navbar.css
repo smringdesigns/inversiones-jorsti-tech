@@ -1,0 +1,76 @@
+/* Barra de navegación */
+.navbar {
+  background-color: var(--color-medium); /* Fondo gris grafito */
+  padding: 8px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Responsivo */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+
+/* Lista de navegación */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; /* Para pantallas pequeñas */
+  gap: 10px;
+}
+
+.nav-item {
+  margin: 0 5px;
+}
+
+/* Enlaces */
+.nav-link {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--color-secondary); /* Azul corporativo */
+  color: var(--color-white);
+  box-shadow: 0 0 10px var(--color-accent); /* Glow en hover */
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .nav-list {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .logo-container {
+    margin-bottom: 12px;
+  }
+}

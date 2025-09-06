@@ -1,0 +1,185 @@
+/* Contenedor principal */
+.documento-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--color-medium); /* gris grafito */
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: auto;
+}
+
+/* Cabecera de la empresa */
+.empresa-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--color-light-muted);
+  padding-bottom: 1rem;
+}
+
+.empresa-logo {
+  width: 70px;
+  height: auto;
+}
+
+.empresa-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-secondary); /* azul corporativo */
+}
+
+.empresa-header p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  color: var(--color-light-muted);
+}
+
+/* Cabecera del documento */
+.documento-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.documento-header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-accent); /* Cian brillante para resaltar */
+}
+
+/* Tabla */
+.documento-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.documento-table th,
+.documento-table td {
+  border: 1px solid var(--color-light-muted);
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.documento-table th {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.documento-total {
+  font-weight: bold;
+  background: var(--color-blue-dark); /* azul oscuro */
+  color: var(--color-white);
+  text-align: right;
+}
+
+/* Botones */
+.documento-actions {
+  text-align: right;
+  margin-top: 1.5rem;
+}
+
+.documento-actions button {
+  padding: 0.8rem 1.5rem;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.documento-actions button:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  transform: scale(1.05);
+}
+
+/* Variantes por tipo */
+.factura-header h1 {
+  color: var(--color-secondary);
+}
+.cotizacion-header h1 {
+  color: var(--color-cyan);
+}
+.cuenta-cobro-header h1 {
+  color: var(--color-danger);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .documento-container {
+    padding: 1rem;
+  }
+
+  .empresa-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .documento-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .documento-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .documento-table {
+    font-size: 0.85rem;
+  }
+}
+
+/* Impresión */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 15mm;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .documento-container, .documento-container * {
+    visibility: visible;
+  }
+
+  .documento-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .documento-table {
+    font-size: 11pt;
+  }
+}
